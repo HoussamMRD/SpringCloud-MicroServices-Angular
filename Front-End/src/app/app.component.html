@@ -1,0 +1,81 @@
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <span class="navbar-brand">
+      <i class="fas fa-laptop-code"></i> Tech-Store
+    </span>
+    <input type="text" class="form-control search-bar" placeholder="Search...">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <button class="btn btn-outline-light logout-btn" >
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="wrapper">
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>  <i class="fas fa-user"></i> Admin</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a class="nav-link active" routerLink="/products">
+          <i class="fas fa-box"></i> Products
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/customers">
+          <i class="fas fa-users"></i> Customers
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/orders">
+          <i class="fas fa-shopping-cart"></i> Orders
+        </a>
+      </li>
+
+      <li>
+        <a class="nav-link" routerLink="/invoices">
+          <i class="fas fa-file-invoice"></i> Factures
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+
+
+
+
+
+
+
+
+
+
+<!-- Page Content -->
+  <div id="content">
+    <!-- Your main content goes here -->
+    <router-outlet></router-outlet>
+
+
+  </div>
+
+</div>
+
+
+
+

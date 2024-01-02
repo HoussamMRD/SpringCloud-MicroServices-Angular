@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-*****************" crossorigin="anonymous">
+  <style>
+    #container {
+      margin-top: 50px;
+    }
+    .product-form {
+      background-color: #f8f9fa; /* Grey background color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <title>Add-Product</title>
+</head>
+
+
+<body>
+<div class="container" id="container">
+  <div class="row">
+    <div class="col-md-3 sidebar">
+      <!-- Votre barre latérale -->
+      <!-- Contenu de la barre latérale -->
+    </div>
+    <div class="col-md-7">
+      <!-- Décalage vers la droite de la table -->
+      <div class="row justify-content-end">
+        <div class="col-md-12">
+          <form class="product-form" (ngSubmit)="addProduct()">
+            <div class="form-group">
+              <label for="productName">  <i class="fas fa-shopping-bag"></i> Product Name:</label>
+              <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="newProduct.name">
+            </div>
+            <div class="form-group">
+              <label for="productCategory"> <i class="fas fa-tags"></i> Catégorie :</label>
+              <input type="text" class="form-control" id="productCategory" name="productCategory" [(ngModel)]="newProduct.category">
+            </div>
+            <div class="form-group">
+              <label for="productDescription"> <i class="fas fa-align-left"></i> Description :</label>
+              <textarea class="form-control" id="productDescription" name="productDescription" rows="3" [(ngModel)]="newProduct.description"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="productPrice"> <i class="fas fa-money-bill-wave"></i> Prix avec Dh :</label>
+              <input type="text" class="form-control" id="productPrice" name="productPrice" [(ngModel)]="newProduct.price">
+            </div>
+            <div class="form-group">
+              <label for="productQuantity"> <i class="fas fa-box"></i> Quantité :</label>
+              <input type="text" class="form-control" id="productQuantity" name="productQuantity" [(ngModel)]="newProduct.quantity">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit <i class="fas fa-plus-circle"></i></button>
+            <button type="button" class="btn btn-secondary" (click)="clearForm()">Cancel</button> <!-- Cancel button -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
